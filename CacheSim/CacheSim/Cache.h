@@ -38,7 +38,7 @@ private:
      int conj,numeroSets;
 
 public:
-    Cache(int nSets, int ass);
+    Cache(int nSets, int ass,int escolhaSubstituicao);
     Answer getHit(int endereco, long int tag); //pode receber answer como ponteiro e dai já mantem o numero do programa total
 };
 #endif // CACHE_H_INCLUDED

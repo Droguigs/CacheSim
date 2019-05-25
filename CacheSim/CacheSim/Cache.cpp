@@ -33,11 +33,11 @@ BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|   BLOCO:: |NUMERO INDI
 
 
 
-Cache::Cache(int nSets, int ass){
+Cache::Cache(int nSets, int ass,int escolhaSubstituicao){
     numeroSets = nSets;
     conj = ass;
     for(int i=0;i<ass;i++){
-        Cache_set temp(nSets);
+        Cache_set temp(nSets,escolhaSubstituicao);
         sets.push_back(temp);
     }
 }
@@ -71,13 +71,13 @@ Answer Cache::getHit(int endereco, long int tag){ //pode receber answer como pon
         }
         if(i == numeroSets){//miss de CAPACIDADE
             MissType missType = capacity;
-            int proximoLivre = sets.at(set_destino).proximoLivre(); //proximo livre retorna um valor randomico se esta cheia a cache
+            int proximoLivre = sets.at(set_destino).proximoLivre(numeroSets); //proximo livre retorna um valor randomico se esta cheia a cache
             sets.at(set_destino).setTag(proximoLivre,tag);
             return Answer(missType);
         }
         else{//miss         COMPULSORIO
             MissType missType = compulsory;
-            int proximoLivre = sets.at(set_destino).proximoLivre();
+            int proximoLivre = sets.at(set_destino).proximoLivre(numeroSets);
             sets.at(set_destino).setTag(proximoLivre,tag);
             sets.at(set_destino).setValidade(proximoLivre);
             return Answer(missType);
