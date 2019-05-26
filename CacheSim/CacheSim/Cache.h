@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include "Answer.h"
-#include <math.h>       /* log2 */
 #include "CacheSet.h"
+#include <list>
 #include <vector>
 #include "MissType.h"
 #include "Address.h"
+#include "AddressList.h"
 
 using namespace std;
 
@@ -21,5 +22,6 @@ private:
 public:
     Cache(int nSets, int ass, int escolhaSubstituicao);
     Answer getHit(Address address); //pode receber answer como ponteiro e dai já mantem o numero do programa total
+    list<Answer> getAllHits(AddressList lista);
 };
 #endif // CACHE_H_INCLUDED

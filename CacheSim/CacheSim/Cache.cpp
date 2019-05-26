@@ -18,6 +18,17 @@ Cache::Cache(int nSets, int ass,int escolhaSubstituicao){
     }
 }
 
+list<Answer> Cache::getAllHits(AddressList lista){
+    int i,j = lista.getSize();
+    list <Answer> result;
+    for(i = 0;i <= j;i++){
+        result.push_back(getHit(lista.getElement(i)));
+    }
+    return result;
+}
+
+
+
 Answer Cache::getHit(Address address){ //pode receber answer como ponteiro e dai já mantem o numero do programa total
 
     if(conj == 1){//direto

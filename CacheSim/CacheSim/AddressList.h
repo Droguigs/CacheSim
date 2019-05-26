@@ -23,7 +23,10 @@ class AddressList {
     list<Address> addressList;
 
 public:
-    AddressList(string myFile);
+    AddressList(string myFile,long unsigned int nBitsIndex,long unsigned int nOffset);
+    long unsigned int ulipow( int base, long unsigned int exp );
+    Address getElement(int nPos);
+    int getSize();
 };
 
 #endif /* AddressList_hpp */
