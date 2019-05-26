@@ -3,7 +3,7 @@
 //  CacheSim
 //
 //  Created by Douglas Schiavi and Giorgio Rossa
-//  Copyright © 2019 Douglas Schiavi. All rights reserved.
+//  Copyright ï¿½ 2019 Douglas Schiavi. All rights reserved.
 //
 
 #include <iostream>
@@ -19,7 +19,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     /*Cache(5);
-    NOffset = log2(bSize);//essas duas variáveis guardam os bits necessários pra achar o tag e o indice
+    NOffset = log2(bSize);//essas duas variï¿½veis guardam os bits necessï¿½rios pra achar o tag e o indice
     Nbits_indice = log2(nSets);*/
     
     switch (argc) {
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
                 cache.createTxt("arquivo_de_entrada");
                 cout << "arquivo 'arquivo_de_entrada' criado com sucesso \n";
             } else {
-                cout << "Favor escrever um conjunto de comandos v‡lido\n";
+                cout << "Favor escrever um conjunto de comandos vï¿½lido\n";
             }
             break;
         case 3:
@@ -52,11 +52,11 @@ int main(int argc, char *argv[])
                 ifstream myFile(argv[2], ios::binary);
                 //checar se tem arquivo
                 AddressList addressList(myFile);
-                cout << "Favor escrever um conjunto de comandos v‡lido\n";
+                cout << "Favor escrever um conjunto de comandos vï¿½lido\n";
             }
             break;
         default:
-            cout << "Favor escrever um conjunto de comandos v‡lido\n";
+            cout << "Favor escrever um conjunto de comandos vï¿½lido\n";
             break;
     }
     return 0;
@@ -74,12 +74,12 @@ estrutura da cache precisa:
     Nbits_indice = log2 NSets;
     Nbits_tag = 32 - N_offset - Nbits_indice;
 
-    abrir o arquivo binário de endereços
+    abrir o arquivo binï¿½rio de endereï¿½os
 
     while(!eof){
-        endereço = endereço do arquivo binario gerado pelo gerador
-        tag = endereço >> (Nbits_indice + N_offset);
-        indice = endereço >> n_offset && (2^Nbits_indice -1)
+        endereï¿½o = endereï¿½o do arquivo binario gerado pelo gerador
+        tag = endereï¿½o >> (Nbits_indice + N_offset);
+        indice = endereï¿½o >> n_offset && (2^Nbits_indice -1)
 
         if(cache_validade[indice] = 0){
             missCompulsorio++;
