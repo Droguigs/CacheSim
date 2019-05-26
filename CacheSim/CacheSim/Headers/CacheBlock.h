@@ -9,14 +9,14 @@ BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
 
 using namespace std;
 
-class Cache_block{
+class CacheBlock{
 
 private:
     bool validade;
     long int tag;
 
 public:
-    Cache_block();
+    CacheBlock();
     bool getValidade();
     long int getTag();
     void setValidade();

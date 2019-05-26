@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B60434932294A4B500DB22F1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60434922294A4B500DB22F1 /* main.cpp */; };
+		B60434A6229997B900DB22F1 /* CacheSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B604349D229997B800DB22F1 /* CacheSet.cpp */; };
+		B60434A7229997B900DB22F1 /* Answer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B604349F229997B800DB22F1 /* Answer.cpp */; };
+		B60434A8229997B900DB22F1 /* CacheBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60434A1229997B900DB22F1 /* CacheBlock.cpp */; };
+		B60434A9229997B900DB22F1 /* Cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60434A2229997B900DB22F1 /* Cache.cpp */; };
+		B60434AA229997B900DB22F1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60434A4229997B900DB22F1 /* main.cpp */; };
+		B60434AB229997B900DB22F1 /* MissType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60434A5229997B900DB22F1 /* MissType.cpp */; };
+		B6B4393E229B07C5005E1530 /* CacheTxtGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6B4393C229B07C5005E1530 /* CacheTxtGenerator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +30,19 @@
 
 /* Begin PBXFileReference section */
 		B604348F2294A4B500DB22F1 /* CacheSim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CacheSim; sourceTree = BUILT_PRODUCTS_DIR; };
-		B60434922294A4B500DB22F1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B604349B229997B800DB22F1 /* MissType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissType.h; sourceTree = "<group>"; };
+		B604349C229997B800DB22F1 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		B604349D229997B800DB22F1 /* CacheSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheSet.cpp; sourceTree = "<group>"; };
+		B604349E229997B800DB22F1 /* CacheSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheSet.h; sourceTree = "<group>"; };
+		B604349F229997B800DB22F1 /* Answer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Answer.cpp; sourceTree = "<group>"; };
+		B60434A0229997B900DB22F1 /* CacheBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheBlock.h; sourceTree = "<group>"; };
+		B60434A1229997B900DB22F1 /* CacheBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheBlock.cpp; sourceTree = "<group>"; };
+		B60434A2229997B900DB22F1 /* Cache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cache.cpp; sourceTree = "<group>"; };
+		B60434A3229997B900DB22F1 /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
+		B60434A4229997B900DB22F1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B60434A5229997B900DB22F1 /* MissType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MissType.cpp; sourceTree = "<group>"; };
+		B6B4393C229B07C5005E1530 /* CacheTxtGenerator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CacheTxtGenerator.cpp; sourceTree = "<group>"; };
+		B6B4393D229B07C5005E1530 /* CacheTxtGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheTxtGenerator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +75,37 @@
 		B60434912294A4B500DB22F1 /* CacheSim */ = {
 			isa = PBXGroup;
 			children = (
-				B60434922294A4B500DB22F1 /* main.cpp */,
+				B6B4393F229B097D005E1530 /* Cpp Files */,
+				B6B43940229B0996005E1530 /* Headers */,
 			);
 			path = CacheSim;
+			sourceTree = "<group>";
+		};
+		B6B4393F229B097D005E1530 /* Cpp Files */ = {
+			isa = PBXGroup;
+			children = (
+				B604349F229997B800DB22F1 /* Answer.cpp */,
+				B60434A2229997B900DB22F1 /* Cache.cpp */,
+				B60434A1229997B900DB22F1 /* CacheBlock.cpp */,
+				B604349D229997B800DB22F1 /* CacheSet.cpp */,
+				B6B4393C229B07C5005E1530 /* CacheTxtGenerator.cpp */,
+				B60434A4229997B900DB22F1 /* main.cpp */,
+				B60434A5229997B900DB22F1 /* MissType.cpp */,
+			);
+			path = "Cpp Files";
+			sourceTree = "<group>";
+		};
+		B6B43940229B0996005E1530 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B604349C229997B800DB22F1 /* Answer.h */,
+				B60434A3229997B900DB22F1 /* Cache.h */,
+				B60434A0229997B900DB22F1 /* CacheBlock.h */,
+				B604349E229997B800DB22F1 /* CacheSet.h */,
+				B6B4393D229B07C5005E1530 /* CacheTxtGenerator.h */,
+				B604349B229997B800DB22F1 /* MissType.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60434932294A4B500DB22F1 /* main.cpp in Sources */,
+				B60434A6229997B900DB22F1 /* CacheSet.cpp in Sources */,
+				B6B4393E229B07C5005E1530 /* CacheTxtGenerator.cpp in Sources */,
+				B60434AB229997B900DB22F1 /* MissType.cpp in Sources */,
+				B60434A7229997B900DB22F1 /* Answer.cpp in Sources */,
+				B60434A9229997B900DB22F1 /* Cache.cpp in Sources */,
+				B60434AA229997B900DB22F1 /* main.cpp in Sources */,
+				B60434A8229997B900DB22F1 /* CacheBlock.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

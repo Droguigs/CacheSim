@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>       /* log2 */
-#include "Cache_set.h"
+#include "CacheSet.h"
 #include "Answer.h"
 #include <vector>
 #include "Cache.h"
@@ -37,7 +37,7 @@ Cache::Cache(int nSets, int ass,int escolhaSubstituicao){
     numeroSets = nSets;
     conj = ass;
     for(int i=0;i<ass;i++){
-        Cache_set temp(nSets,escolhaSubstituicao);
+        CacheSet temp(nSets,escolhaSubstituicao);
         sets.push_back(temp);
     }
 }

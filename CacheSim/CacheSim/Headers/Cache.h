@@ -4,7 +4,7 @@
 #include <iostream>
 #include "Answer.h"
 #include <math.h>       /* log2 */
-#include "Cache_set.h"
+#include "CacheSet.h"
 #include <vector>
 #include "MissType.h"
 
@@ -34,7 +34,7 @@ BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|   BLOCO:: |NUMERO INDI
 
 class Cache{
 private:
-     vector<Cache_set> sets;
+     vector<CacheSet> sets;
      int conj,numeroSets;
 
 public:

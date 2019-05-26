@@ -1,26 +1,24 @@
 #include <iostream>
-#include "Cache_block.h"
+#include "CacheBlock.h"
 /*
 BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
 */
 
-
-
-Cache_block::Cache_block(){
+CacheBlock::CacheBlock(){
     validade = false;
 }
 
-bool Cache_block::getValidade(){
+bool CacheBlock::getValidade(){
     return validade;
 }
-long int Cache_block::getTag(){
+long int CacheBlock::getTag(){
     return tag;
 }
 
-void Cache_block::setValidade(){
+void CacheBlock::setValidade(){
     validade = true;
 }
 
-void Cache_block::setTag(long int tag){
+void CacheBlock::setTag(long int tag){
     this->tag = tag;
 }

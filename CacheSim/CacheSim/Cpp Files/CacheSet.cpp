@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Cache_set.h"
-#include "Cache_block.h"
+#include "CacheSet.h"
+#include "CacheBlock.h"
 #include <vector>
 
 using namespace std;
@@ -18,21 +18,21 @@ BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
 
 //gaurdar numero de lugares abertos e qual o próximo
 //função pra procurar dentro dos blocos
-Cache_set::Cache_set(int nSets,int escolhaSub){
+CacheSet::CacheSet(int nSets,int escolhaSub){
     livre = 0;
     nUltimo = 0;
     escolhaSubstituicao = escolhaSub;
     numeroBlocos = nSets;
     for(int i=0;i<nSets;i++){
-        Cache_block bloco;
+        CacheBlock bloco;
         blocos.push_back( bloco );
     }
 }
 
-bool Cache_set::getValidade(int numeroDoBloco){
+bool CacheSet::getValidade(int numeroDoBloco){
     return blocos.at(numeroDoBloco).getValidade();
 }
-long int Cache_set::getTag(int numeroDoBloco){
+long int CacheSet::getTag(int numeroDoBloco){
     //se for LRU tenho que pegar o valor com esse tag e jogar pro final
     int bloco;
     bloco = numeroDoBloco;
@@ -50,11 +50,11 @@ long int Cache_set::getTag(int numeroDoBloco){
     return blocos.at(numeroDoBloco).getTag();;
 }
 
-void Cache_set::setValidade(int numeroDoBloco){
+void CacheSet::setValidade(int numeroDoBloco){
     blocos.at(numeroDoBloco).setValidade();
 }
 
-int Cache_set::proximoLivre(int tamanhoSet){// 0 - random  1- fifo 2 - LRU
+int CacheSet::proximoLivre(int tamanhoSet){// 0 - random  1- fifo 2 - LRU
     if(livre <= numeroBlocos){
         return livre;
     }
@@ -70,7 +70,7 @@ int Cache_set::proximoLivre(int tamanhoSet){// 0 - random  1- fifo 2 - LRU
         }
     }
 }
-void Cache_set::setTag(int numeroDoBloco,long int tag){
+void CacheSet::setTag(int numeroDoBloco,long int tag){
     if(!(getValidade(numeroDoBloco)))
         livre++;
 
