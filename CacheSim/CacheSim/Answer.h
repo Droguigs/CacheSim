@@ -13,6 +13,8 @@ private:
 public:
     Answer(bool missP);
     Answer(MissType missTypeP);
+    bool getMiss();
+    MissType getMissType();
 };
 
 #endif // ANSWER_H_INCLUDED

@@ -16,6 +16,7 @@
 		B6B4393E229B07C5005E1530 /* CacheTxtGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6B4393C229B07C5005E1530 /* CacheTxtGenerator.cpp */; };
 		B6B43943229B29AE005E1530 /* AddressList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6B43941229B29AE005E1530 /* AddressList.cpp */; };
 		B6B43946229B2A2C005E1530 /* Address.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6B43944229B2A2C005E1530 /* Address.cpp */; };
+		B6B4394B229B4070005E1530 /* AnswerList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6B43949229B4070005E1530 /* AnswerList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,8 @@
 		B6B43942229B29AE005E1530 /* AddressList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressList.h; sourceTree = "<group>"; };
 		B6B43944229B2A2C005E1530 /* Address.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Address.cpp; sourceTree = "<group>"; };
 		B6B43945229B2A2C005E1530 /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		B6B43949229B4070005E1530 /* AnswerList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AnswerList.cpp; sourceTree = "<group>"; };
+		B6B4394A229B4070005E1530 /* AnswerList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 				B6B43944229B2A2C005E1530 /* Address.cpp */,
 				B6B43941229B29AE005E1530 /* AddressList.cpp */,
 				B604349F229997B800DB22F1 /* Answer.cpp */,
+				B6B43949229B4070005E1530 /* AnswerList.cpp */,
 				B60434A2229997B900DB22F1 /* Cache.cpp */,
 				B60434A1229997B900DB22F1 /* CacheBlock.cpp */,
 				B604349D229997B800DB22F1 /* CacheSet.cpp */,
@@ -109,6 +113,7 @@
 				B6B43945229B2A2C005E1530 /* Address.h */,
 				B6B43942229B29AE005E1530 /* AddressList.h */,
 				B604349C229997B800DB22F1 /* Answer.h */,
+				B6B4394A229B4070005E1530 /* AnswerList.h */,
 				B60434A3229997B900DB22F1 /* Cache.h */,
 				B60434A0229997B900DB22F1 /* CacheBlock.h */,
 				B604349E229997B800DB22F1 /* CacheSet.h */,
@@ -181,6 +186,7 @@
 				B60434AB229997B900DB22F1 /* MissType.cpp in Sources */,
 				B60434A7229997B900DB22F1 /* Answer.cpp in Sources */,
 				B60434A9229997B900DB22F1 /* Cache.cpp in Sources */,
+				B6B4394B229B4070005E1530 /* AnswerList.cpp in Sources */,
 				B60434AA229997B900DB22F1 /* main.cpp in Sources */,
 				B60434A8229997B900DB22F1 /* CacheBlock.cpp in Sources */,
 			);
