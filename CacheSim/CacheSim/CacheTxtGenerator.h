@@ -12,7 +12,7 @@
 #include <iostream>
 
 class CacheTxtGenerator {
-    
+public:
     void createTxt (std::string name);
     
 };

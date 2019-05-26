@@ -15,6 +15,7 @@
 using namespace std;
 
 void CacheTxtGenerator:: createTxt (string name) {
+    
     ofstream myFile(name, ios::binary);
     unsigned long int randGenerated = 0;
     
