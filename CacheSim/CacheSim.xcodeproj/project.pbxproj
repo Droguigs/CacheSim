@@ -14,6 +14,8 @@
 		B60434AA229997B900DB22F1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60434A4229997B900DB22F1 /* main.cpp */; };
 		B60434AB229997B900DB22F1 /* MissType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60434A5229997B900DB22F1 /* MissType.cpp */; };
 		B6B4393E229B07C5005E1530 /* CacheTxtGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6B4393C229B07C5005E1530 /* CacheTxtGenerator.cpp */; };
+		B6B43943229B29AE005E1530 /* AddressList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6B43941229B29AE005E1530 /* AddressList.cpp */; };
+		B6B43946229B2A2C005E1530 /* Address.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6B43944229B2A2C005E1530 /* Address.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,10 @@
 		B60434A5229997B900DB22F1 /* MissType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MissType.cpp; sourceTree = "<group>"; };
 		B6B4393C229B07C5005E1530 /* CacheTxtGenerator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CacheTxtGenerator.cpp; sourceTree = "<group>"; };
 		B6B4393D229B07C5005E1530 /* CacheTxtGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheTxtGenerator.h; sourceTree = "<group>"; };
+		B6B43941229B29AE005E1530 /* AddressList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AddressList.cpp; sourceTree = "<group>"; };
+		B6B43942229B29AE005E1530 /* AddressList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressList.h; sourceTree = "<group>"; };
+		B6B43944229B2A2C005E1530 /* Address.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Address.cpp; sourceTree = "<group>"; };
+		B6B43945229B2A2C005E1530 /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,15 +81,17 @@
 		B60434912294A4B500DB22F1 /* CacheSim */ = {
 			isa = PBXGroup;
 			children = (
-				B6B4393F229B097D005E1530 /* Cpp Files */,
-				B6B43940229B0996005E1530 /* Headers */,
+				B6B43947229B2BD6005E1530 /* Cpp */,
+				B6B43948229B2BF3005E1530 /* Header */,
 			);
 			path = CacheSim;
 			sourceTree = "<group>";
 		};
-		B6B4393F229B097D005E1530 /* Cpp Files */ = {
+		B6B43947229B2BD6005E1530 /* Cpp */ = {
 			isa = PBXGroup;
 			children = (
+				B6B43944229B2A2C005E1530 /* Address.cpp */,
+				B6B43941229B29AE005E1530 /* AddressList.cpp */,
 				B604349F229997B800DB22F1 /* Answer.cpp */,
 				B60434A2229997B900DB22F1 /* Cache.cpp */,
 				B60434A1229997B900DB22F1 /* CacheBlock.cpp */,
@@ -92,12 +100,14 @@
 				B60434A4229997B900DB22F1 /* main.cpp */,
 				B60434A5229997B900DB22F1 /* MissType.cpp */,
 			);
-			path = "Cpp Files";
+			name = Cpp;
 			sourceTree = "<group>";
 		};
-		B6B43940229B0996005E1530 /* Headers */ = {
+		B6B43948229B2BF3005E1530 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				B6B43945229B2A2C005E1530 /* Address.h */,
+				B6B43942229B29AE005E1530 /* AddressList.h */,
 				B604349C229997B800DB22F1 /* Answer.h */,
 				B60434A3229997B900DB22F1 /* Cache.h */,
 				B60434A0229997B900DB22F1 /* CacheBlock.h */,
@@ -105,7 +115,7 @@
 				B6B4393D229B07C5005E1530 /* CacheTxtGenerator.h */,
 				B604349B229997B800DB22F1 /* MissType.h */,
 			);
-			path = Headers;
+			name = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B60434A6229997B900DB22F1 /* CacheSet.cpp in Sources */,
+				B6B43946229B2A2C005E1530 /* Address.cpp in Sources */,
 				B6B4393E229B07C5005E1530 /* CacheTxtGenerator.cpp in Sources */,
+				B6B43943229B29AE005E1530 /* AddressList.cpp in Sources */,
 				B60434AB229997B900DB22F1 /* MissType.cpp in Sources */,
 				B60434A7229997B900DB22F1 /* Answer.cpp in Sources */,
 				B60434A9229997B900DB22F1 /* Cache.cpp in Sources */,
