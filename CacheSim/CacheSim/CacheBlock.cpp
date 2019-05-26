@@ -1,8 +1,4 @@
-#include <iostream>
 #include "CacheBlock.h"
-/*
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-*/
 
 CacheBlock::CacheBlock(){
     validade = false;
@@ -11,7 +7,7 @@ CacheBlock::CacheBlock(){
 bool CacheBlock::getValidade(){
     return validade;
 }
-long int CacheBlock::getTag(){
+unsigned long int CacheBlock::getTag(){
     return tag;
 }
 

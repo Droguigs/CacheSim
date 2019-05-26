@@ -3,10 +3,6 @@
 
 #include <iostream>
 
-/*
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-*/
-
 using namespace std;
 
 class CacheBlock{
@@ -18,7 +14,7 @@ private:
 public:
     CacheBlock();
     bool getValidade();
-    long int getTag();
+    unsigned long int getTag();
     void setValidade();
     void setTag(long int tag);
 

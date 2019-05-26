@@ -10,13 +10,16 @@
 
 using namespace std;
 
-AddressList::AddressList(ifstream myFile) {
+AddressList::AddressList(string myFile) {
     Address temp;
-    while(myFile.read((char *)&temp, sizeof(long unsigned int))){
+    ifstream source;
+    source.open(myFile,ios::binary);
+
+    while(source.read((char *)&temp, sizeof(long unsigned int))){
         //tmp to array
-        
+
         addressList.push_back(Address(temp));
     }
-    myFile.close();
+    source.close();
 }
 

@@ -10,6 +10,7 @@
 #define AddressList_h
 
 #include <iostream>
+#include <string.h>
 #include <list>
 #include <fstream>
 
@@ -18,11 +19,11 @@
 using namespace std;
 
 class AddressList {
-    
+
     list<Address> addressList;
-    
+
 public:
-    AddressList(ifstream myFile);
+    AddressList(string myFile);
 };
 
 #endif /* AddressList_hpp */

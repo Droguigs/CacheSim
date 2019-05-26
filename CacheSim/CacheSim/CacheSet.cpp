@@ -1,20 +1,7 @@
-#include <iostream>
 #include "CacheSet.h"
-#include "CacheBlock.h"
-#include <vector>
 
 using namespace std;
 
-/*set
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-BLOCO:: |NUMERO INDICE|BLOCO DE INFO|TAG|VALIDADE|OFFSET|
-*/
 
 //gaurdar numero de lugares abertos e qual o próximo
 //função pra procurar dentro dos blocos
@@ -32,7 +19,7 @@ CacheSet::CacheSet(int nSets,int escolhaSub){
 bool CacheSet::getValidade(int numeroDoBloco){
     return blocos.at(numeroDoBloco).getValidade();
 }
-long int CacheSet::getTag(int numeroDoBloco){
+unsigned long int CacheSet::getTag(int numeroDoBloco){
     //se for LRU tenho que pegar o valor com esse tag e jogar pro final
     int bloco;
     bloco = numeroDoBloco;
@@ -70,7 +57,7 @@ int CacheSet::proximoLivre(int tamanhoSet){// 0 - random  1- fifo 2 - LRU
         }
     }
 }
-void CacheSet::setTag(int numeroDoBloco,long int tag){
+void CacheSet::setTag(int numeroDoBloco,unsigned long int tag){
     if(!(getValidade(numeroDoBloco)))
         livre++;
 
