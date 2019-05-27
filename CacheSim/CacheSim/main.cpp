@@ -48,13 +48,12 @@ int main(int argc, char *argv[]){
         case 1:{
 
             //run cache bench on default
-
             CacheTxtGenerator cacheDefaultI;
             cacheDefaultI.createTxt("default");
 
             AddressList addressListIns("default",log2(256),log2(4));
 
-            Cache L1(256,1,0);
+            Cache L1(255,1,0);
             list<Answer> L1Misses = L1.getAllHits(addressListIns);
 
             AnswerList answerList(L1Misses);
@@ -65,7 +64,7 @@ int main(int argc, char *argv[]){
             break;
         }
         case 2:{
-            if (strcmp(argv[1], "default")) {
+            if (!(strcmp(argv[0], "default"))) {
                 //run cache on default configuration
 
                 CacheTxtGenerator cacheDefaultI;
@@ -73,7 +72,7 @@ int main(int argc, char *argv[]){
 
                 AddressList addressListIns("default",log2(256),log2(4));
 
-                Cache L1(256,1,0);
+                Cache L1(255,1,0);
                 list<Answer> L1Misses = L1.getAllHits(addressListIns);
 
                 AnswerList answerList(L1Misses);
@@ -81,7 +80,7 @@ int main(int argc, char *argv[]){
                 printAnswers(answerList);
 
 
-            } else if (strcmp(argv[1], "generate")){
+            } else if (!strcmp(argv[1], "generate")){
                 CacheTxtGenerator cache;
                 cache.createTxt("arquivo_de_entrada");
                 cout << "arquivo 'arquivo_de_entrada' criado com sucesso \n";
@@ -92,7 +91,7 @@ int main(int argc, char *argv[]){
         }
 
         case 3:{
-            if (strcmp(argv[1], "generate")) {
+            if (!(strcmp(argv[1], "generate"))) {
                 CacheTxtGenerator cache;
                 cache.createTxt(argv[2]);
                 string message = "arquivo '";

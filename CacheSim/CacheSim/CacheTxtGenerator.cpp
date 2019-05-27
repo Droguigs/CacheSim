@@ -15,15 +15,15 @@
 using namespace std;
 
 void CacheTxtGenerator:: createTxt (string name) {
-    
+
     ofstream myFile(name, ios::binary);
     unsigned long int randGenerated = 0;
-    
+
     for(int i = 0; i < 131000; ++i) {
         randGenerated = rand() % 65500;
         myFile.write((char*)&randGenerated,sizeof(randGenerated));
     }
-    
+
     myFile.close();
     return ;
 }

@@ -33,7 +33,6 @@ unsigned long int CacheSet::getTag(int numeroDoBloco){
             }
         }
     }
-
     return blocos.at(numeroDoBloco).getTag();;
 }
 
@@ -42,7 +41,7 @@ void CacheSet::setValidade(int numeroDoBloco){
 }
 
 int CacheSet::proximoLivre(int tamanhoSet){// 0 - random  1- fifo 2 - LRU
-    if(livre <= numeroBlocos){
+    if(livre < numeroBlocos){
         return livre;
     }
     else{//aqui depende da escolha de reposição rand, fifo, lru
