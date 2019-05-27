@@ -14,7 +14,7 @@ AnswerList::AnswerList(list<Answer> myList) {
     list <Answer>::iterator it;
     for(it = myList.begin(); it != myList.end(); it++){
         bool isMiss = (*it).getMiss();
-        if (isMiss) {
+        if (!isMiss) {
             hits++;
         } else {
             //capacity, compulsory, conflict

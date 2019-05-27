@@ -20,7 +20,7 @@ void CacheTxtGenerator:: createTxt (string name) {
     unsigned long int randGenerated = 0;
     
     for(int i = 0; i < 131000; ++i) {
-        randGenerated = rand() % 4294967296;
+        randGenerated = rand() % 65500;
         myFile.write((char*)&randGenerated,sizeof(randGenerated));
     }
     

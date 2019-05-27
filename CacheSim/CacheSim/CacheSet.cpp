@@ -23,11 +23,11 @@ unsigned long int CacheSet::getTag(int numeroDoBloco){
     //se for LRU tenho que pegar o valor com esse tag e jogar pro final
     int bloco;
     bloco = numeroDoBloco;
-    if(escolhaSubstituicao == 2){
+    if(escolhaSubstituicao == 2) {
         list<int>::iterator it;
 
         for(it=ordemSubs.begin();it != ordemSubs.end();it++){
-            if(*it == bloco){
+            if(*it == bloco) {
                 ordemSubs.splice(ordemSubs.end(),ordemSubs, it); //splice pega o elemento que it aponta do segundo parametro e joga no primeiro(ou seja no final)
                 break;
             }

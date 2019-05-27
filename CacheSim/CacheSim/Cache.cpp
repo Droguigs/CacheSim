@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//vetor de sets é uma matriz de blocos
+//vetor de sets ï¿½ uma matriz de blocos
 
 
 Cache::Cache(int nSets, int ass,int escolhaSubstituicao){
@@ -21,7 +21,7 @@ Cache::Cache(int nSets, int ass,int escolhaSubstituicao){
 list<Answer> Cache::getAllHits(AddressList lista){
     int i,j = lista.getSize();
     list <Answer> result;
-    for(i = 0;i <= j;i++){
+    for(i = 0; i<j; i++){
         result.push_back(getHit(lista.getElement(i)));
     }
     return result;
@@ -29,22 +29,24 @@ list<Answer> Cache::getAllHits(AddressList lista){
 
 
 
-Answer Cache::getHit(Address address){ //pode receber answer como ponteiro e dai já mantem o numero do programa total
+Answer Cache::getHit(Address address){ //pode receber answer como ponteiro e dai jï¿½ mantem o numero do programa total
 
     if(conj == 1){//direto
         if(sets.at(0).getValidade(address.getIndex()%conj) == 1){ //dado valido
-            if(sets.at(0).getTag(address.getIndex()%conj) == address.getTag()) //mesmo tag
+        if(sets.at(0).getValidade(address.getIndex()%numeroSets) == 1){ //dado valido
+            if(sets.at(0).getTag(address.getIndex()%numeroSets) == address.getTag()) { //mesmo tag
                 return Answer(false); //HIT
+            }
             else{   //tag diferente         CONFLITO
                 MissType missType = conflict;
-                sets.at(0).setTag(address.getIndex()%conj,address.getTag());
+                sets.at(0).setTag(address.getIndex()%numeroSets,address.getTag());
                 return Answer(missType);
             }
         }
-        else{ //dado inválido       COMPULSORIO
+        else{ //dado invï¿½lido       COMPULSORIO
             MissType missType = compulsory;
-            sets.at(0).setTag(address.getIndex()%conj,address.getTag()); // MUITO IMPORTANTE: SET TAG SEMPRE ANTES DE SETVALIDADE!
-            sets.at(0).setValidade(address.getIndex()%conj);
+            sets.at(0).setTag(address.getIndex()%numeroSets,address.getTag()); // MUITO IMPORTANTE: SET TAG SEMPRE ANTES DE SETVALIDADE!
+            sets.at(0).setValidade(address.getIndex()%numeroSets);
             return Answer(missType);
         }
     }
